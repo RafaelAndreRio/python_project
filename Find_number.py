@@ -3,8 +3,6 @@ import random;
 import os;
 
 #Fuctions
-
-
 def clear():
     os.system('cls');
 
