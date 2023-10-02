@@ -35,14 +35,14 @@ print("rules: \t You Have to find the number from the computer\n\t the numbers m
 
 #check_input
 while not high_Number:
-    level=input("wich level do you wanna play? \nE-Easy, M-Mediu, H-Hard, G-Good :\n").lower()
+    level=input("wich level do you wanna play? \nE-Easy, M-Mediu, H-Hard, G-God :\n").lower()
     high_Number=check_level(level)
 
 radom_number=random.randint(low_number, high_Number)
 
 clear()
 
-while player_number is not radom_number:
+while player_number != radom_number:
 
     player_number=input(f"pick a number between {low_number} and, {high_Number} \n")
     if player_number.isnumeric():
@@ -51,11 +51,11 @@ while player_number is not radom_number:
         player_number=int(player_number); #convert from str To int
 
         if player_number < radom_number:
-            print("Sorry, not this time... your number is to low")
+            print("Sorry, not this time... your number is to low\n")
         elif player_number > radom_number:
-            print("Sorry, not this time... your number is to high")
+            print("Sorry, not this time... your number is to high\n")
 
     else:
-       print("sorry, input invalid")
+       print("sorry, input invalid\n")
 
 print(f"congrats, you find the number in {plays}, plays\n\n")
